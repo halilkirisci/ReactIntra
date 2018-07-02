@@ -1,4 +1,4 @@
 # ReactIntra
 React Test Uygulaması
 
-by Halil
+by Halil.
