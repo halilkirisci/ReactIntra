@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from '../Parts/SearchBar';
 import $ from 'jquery';
+import RehberList from '../Parts/Rehber-List';
 
 class Rehber extends Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class Rehber extends Component {
     return (
       <div className="container">
         <SearchBar onAraClick={this.GetKisi} />
+        <RehberList kisiler={this.state.kisiler} />
       </div>
     );
   }
