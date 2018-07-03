@@ -38,7 +38,7 @@ const IncBody = props => {
         </div>
 
         <div className="m-content">
-          <div className="col-md-8">{props.menuBilgisi == 'Rehber' ? <Rehber /> : <Duyuru />}</div>
+          <div className="col-md-8">{props.menuBilgisi == 'Rehber' ? <Duyuru /> : <Rehber />}</div>
         </div>
       </div>
     </div>
