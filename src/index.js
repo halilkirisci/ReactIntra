@@ -6,8 +6,8 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import reducers from './reducers';
 
-import './style/style.css';
-import 'bootstrap/dist/css/bootstrap.css';
+//import './style/style.css';
+//import 'bootstrap/dist/css/bootstrap.css';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 const store = createStoreWithMiddleware(
