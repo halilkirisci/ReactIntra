@@ -50,11 +50,7 @@ const IncHeader = props => {
               className="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "
             >
               <ul className="m-menu__nav  m-menu__nav--submenu-arrow ">
-                <li
-                  className="m-menu__item  m-menu__item--submenu m-menu__item--rel"
-                  m-menu-submenu-toggle="click"
-                  aria-haspopup="true"
-                >
+                <li className="m-menu__item  m-menu__item--submenu m-menu__item--rel">
                   <a href="javascript:;" className="m-menu__link m-menu__toggle">
                     <span className="m-menu__link-text">Test</span>
                   </a>

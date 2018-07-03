@@ -11,12 +11,12 @@ const IncBody = props => {
         <i className="la la-close" />
       </button>
 
-      <LeftNav />
+      <LeftNav onMenuSelect={props.onMenuSelect} />
       <div className="m-grid__item m-grid__item--fluid m-wrapper">
         <div className="m-subheader ">
           <div className="d-flex align-items-center">
             <div className="mr-auto">
-              <h3 className="m-subheader__title ">React Intra</h3>
+              <h3 className="m-subheader__title ">{props.menuBilgisi}</h3>
             </div>
             <div>
               <span className="m-subheader__daterange" id="m_dashboard_daterangepicker">
