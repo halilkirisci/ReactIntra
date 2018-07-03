@@ -1,5 +1,7 @@
 import React from 'react';
 import LeftNav from './Nav/LeftNav';
+import Rehber from './Pages/Rehber';
+import Duyuru from './Pages/Duyuru';
 
 const IncBody = props => {
   return (
@@ -35,7 +37,9 @@ const IncBody = props => {
           </div>
         </div>
 
-        <div className="m-content" />
+        <div className="m-content">
+          <div className="col-md-8">{props.menuBilgisi == 'Rehber' ? <Rehber /> : <Duyuru />}</div>
+        </div>
       </div>
     </div>
   );

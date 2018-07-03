@@ -8,15 +8,18 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="row">
-        <div className="col-md-6 col-md-offset-3">
-          <div className="input-group">
-            <input className="form-control input-lg" />
-            <span className="input-group-btn">
-              <button className="btn btn-info input-lg">
-                <i className="glyphicon glyphicon-search" />
-              </button>
-            </span>
-          </div>
+        <div className="input-group col-md-4">
+          <input
+            className="form-control py-2"
+            type="search"
+            value="Kişi Ara"
+            id="example-search-input"
+          />
+          <span className="input-group-append">
+            <button className="btn btn-outline-secondary btn-success" type="button">
+              <i className="fa fa-search " />
+            </button>
+          </span>
         </div>
       </div>
     );
