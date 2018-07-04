@@ -25,7 +25,7 @@ class Rehber extends Component {
     return (
       <div className="container-fluid">
         <SearchBar onAraClick={this.GetKisi} />
-        <RehberList kisiler={this.state.kisiler} />
+        <RehberList key="RehberListe" kisiler={this.state.kisiler} />
       </div>
     );
   }
