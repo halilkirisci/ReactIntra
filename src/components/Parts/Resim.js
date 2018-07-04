@@ -7,7 +7,7 @@ class Resim extends Component {
   }
 
   render() {
-    return <img src={dosya.HASH_CODE} alt="" />;
+    return <img src="" alt="" />;
   }
 }
 export default Resim;
