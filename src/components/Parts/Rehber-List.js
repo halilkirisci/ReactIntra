@@ -7,8 +7,7 @@ const RehberList = props => {
     <div className="row">
       {_.map(props.kisiler, (kisi, i) => (
         <div className="col-xl-3">
-          {' '}
-          <RehberListItem key={i} kisi={kisi} />
+          <RehberListItem key={'rehber' + i} kisi={kisi} />
         </div>
       ))}
     </div>

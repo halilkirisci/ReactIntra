@@ -7,11 +7,7 @@ const RehberListItem = props => {
     <div className="card">
       <div className="card-body text-center">
         <p>
-          <img
-            className=" img-fluid"
-            src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png"
-            alt="card image"
-          />
+          <Resim key={kisi.KOD} kod={kisi.KOD} />
         </p>
         <h4 className="card-title">
           {kisi.PERSONEL_AD} {kisi.SOYAD}
