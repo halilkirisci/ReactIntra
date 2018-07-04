@@ -15,7 +15,7 @@ class Rehber extends Component {
   }
 
   GetKisi(anahtar) {
-    $.getJSON(`http://172.17.1.110/intapi/api/Kisi/${anahtar}/0/5`, result => {
+    $.getJSON(`http://172.17.4.29/intapi/api/Kisi/${anahtar}`, result => {
       const kisiler = result;
       this.setState({ kisiler });
     });
