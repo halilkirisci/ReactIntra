@@ -15,7 +15,6 @@ class Resim extends Component {
       },
     );
   };
-
   render() {
     console.log('dolduuu ' + this.state.res);
     if (!this.state.res) {
