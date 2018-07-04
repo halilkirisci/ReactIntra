@@ -16,28 +16,28 @@ const IncFooter = props => {
           <div className="m-stack__item m-stack__item--right m-stack__item--middle m-stack__item--first">
             <ul className="m-footer__nav m-nav m-nav--inline m--pull-right">
               <li className="m-nav__item">
-                <a href="#" className="m-nav__link">
+                <a href="" className="m-nav__link">
                   <span className="m-nav__link-text">About</span>
                 </a>
               </li>
               <li className="m-nav__item">
-                <a href="#" className="m-nav__link">
+                <a href="" className="m-nav__link">
                   <span className="m-nav__link-text">Privacy</span>
                 </a>
               </li>
               <li className="m-nav__item">
-                <a href="#" className="m-nav__link">
+                <a href="" className="m-nav__link">
                   <span className="m-nav__link-text">T C</span>
                 </a>
               </li>
               <li className="m-nav__item">
-                <a href="#" className="m-nav__link">
+                <a href="" className="m-nav__link">
                   <span className="m-nav__link-text">Purchase</span>
                 </a>
               </li>
               <li className="m-nav__item m-nav__item">
                 <a
-                  href="#"
+                  href=""
                   className="m-nav__link"
                   data-toggle="m-tooltip"
                   title="Support Center"

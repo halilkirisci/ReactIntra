@@ -27,7 +27,7 @@ const IncBody = props => {
                   <span className="m-subheader__daterange-date m--font-brand" />
                 </span>
                 <a
-                  href="#"
+                  href=""
                   className="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill"
                 >
                   <i className="la la-angle-down" />
@@ -37,7 +37,7 @@ const IncBody = props => {
           </div>
         </div>
 
-        <div className="m-content">{props.menuBilgisi == 'Rehber' ? <Duyuru /> : <Rehber />}</div>
+        <div className="m-content">{props.menuBilgisi === 'Rehber' ? <Duyuru /> : <Rehber />}</div>
       </div>
     </div>
   );
