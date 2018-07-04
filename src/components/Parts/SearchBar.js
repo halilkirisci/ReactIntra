@@ -18,23 +18,21 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="row">
-        <div className="input-group mb-3">
-          <input
-            className="form-control input-lg"
-            value={this.state.anahtar}
-            onChange={event => this.onInputChange(event.target.value)}
-            onKeyPress={this.araHandle}
-          />
-          <div className="input-group-append">
-            <button
-              onClick={() => this.props.onAraClick(this.state.anahtar)}
-              className="btn btn-outline-secondary btn-success"
-              type="button"
-            >
-              Button
-            </button>
-          </div>
+      <div className="input-group mb-3">
+        <input
+          className="form-control input-lg"
+          value={this.state.anahtar}
+          onChange={event => this.onInputChange(event.target.value)}
+          onKeyPress={this.araHandle}
+        />
+        <div className="input-group-append">
+          <button
+            onClick={() => this.props.onAraClick(this.state.anahtar)}
+            className="btn btn-outline-secondary btn-success"
+            type="button"
+          >
+            Button
+          </button>
         </div>
       </div>
     );
