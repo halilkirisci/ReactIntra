@@ -2,22 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import LeftNav from './Nav/LeftNav';
+import * as yol from './Nav/RouteFile';
 import Rehber from './Pages/Rehber';
 import Duyuru from './Pages/Duyuru';
-const routes = [
-  {
-    path: '/',
-    exact: true,
-    component: Rehber,
-    sidebar: () => <h3>Rehber</h3>,
-  },
-  {
-    path: '/duyuru',
-    exact: true,
-    component: Duyuru,
-    sidebar: () => <h3>Duyuru</h3>,
-  },
-];
+
 const IncBody = props => {
   return (
     <Router>
@@ -35,7 +23,7 @@ const IncBody = props => {
             <div className="d-flex align-items-center">
               <div className="mr-auto">
                 <h3 className="m-subheader__title ">
-                  {routes.map((route, i) => (
+                  {yol.routes.map((route, i) => (
                     <Route
                       key={i}
                       path={route.path}
@@ -63,7 +51,7 @@ const IncBody = props => {
           </div>
 
           <div className="m-content">
-            {routes.map((route, i) => (
+            {yol.routes.map((route, i) => (
               <Route key={i} path={route.path} exact={route.exact} component={route.component} />
             ))}
           </div>
