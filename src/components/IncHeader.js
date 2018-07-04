@@ -14,7 +14,7 @@ const IncHeader = props => {
               </div>
               <div className="m-stack__item m-stack__item--middle m-brand__tools">
                 <a
-                  href="javascript:;"
+                  href=""
                   id="m_aside_left_offcanvas_toggle"
                   className="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block"
                 >
@@ -22,7 +22,7 @@ const IncHeader = props => {
                 </a>
                 <a
                   id="m_aside_header_menu_mobile_toggle"
-                  href="javascript:;"
+                  href=""
                   className="m-brand__icon m-brand__toggler m--visible-tablet-and-mobile-inline-block"
                 >
                   <span />
@@ -30,7 +30,7 @@ const IncHeader = props => {
 
                 <a
                   id="m_aside_header_topbar_mobile_toggle"
-                  href="javascript:;"
+                  href=""
                   className="m-brand__icon m--visible-tablet-and-mobile-inline-block"
                 >
                   <i className="flaticon-more" />
@@ -51,7 +51,7 @@ const IncHeader = props => {
             >
               <ul className="m-menu__nav  m-menu__nav--submenu-arrow ">
                 <li className="m-menu__item  m-menu__item--submenu m-menu__item--rel">
-                  <a href="javascript:;" className="m-menu__link m-menu__toggle">
+                  <a href="" className="m-menu__link m-menu__toggle">
                     <span className="m-menu__link-text">Test</span>
                   </a>
                 </li>

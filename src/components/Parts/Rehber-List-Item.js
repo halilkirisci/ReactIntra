@@ -3,6 +3,7 @@ import Resim from './Resim';
 
 const RehberListItem = props => {
   const { kisi } = props;
+
   return (
     <div className="card">
       <div className="card-body text-center">
@@ -14,7 +15,7 @@ const RehberListItem = props => {
         </h4>
         <h5 className="card-text">{kisi.FİİLİ_GÖREV_YERİ}</h5>
         <h6 className="card-text">{kisi.İş_Tel}</h6>
-        <a href="#" className="btn btn-primary btn-sm">
+        <a href="" className="btn btn-primary btn-sm">
           <i className="fa fa-plus" />
         </a>
       </div>
