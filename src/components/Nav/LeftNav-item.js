@@ -12,7 +12,7 @@ const LeftNavitem = props => {
         </Link>
       </li>
       <li className="m-menu__item ">
-        <Link className="m-menu__link" to="/about" onClick={() => props.onMenuSelect('Duyuru')}>
+        <Link className="m-menu__link" to="/duyuru" onClick={() => props.onMenuSelect('Duyuru')}>
           <span className="m-menu__item-here" />
           <i className="m-menu__link-icon flaticon-line-graph" />
           <span className="m-menu__link-text">Duyuru</span>
