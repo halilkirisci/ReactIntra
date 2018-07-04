@@ -9,6 +9,7 @@ const LeftNav = props => {
         className="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark m-aside-menu--dropdown "
       >
         <LeftNavitem onMenuSelect={props.onMenuSelect} />
+        <hr />
       </div>
     </div>
   );
