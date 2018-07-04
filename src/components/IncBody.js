@@ -1,10 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-
-import LeftNav from './Nav/LeftNav';
 import * as yol from './Nav/RouteFile';
-import Rehber from './Pages/Rehber';
-import Duyuru from './Pages/Duyuru';
+import LeftNav from './Nav/LeftNav';
 
 const IncBody = props => {
   return (
