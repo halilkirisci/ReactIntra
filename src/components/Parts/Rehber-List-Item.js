@@ -1,5 +1,6 @@
 import React from 'react';
-import Resim from './Resim';
+import Resim from './Vesikalik';
+import Vesikalik from './Vesikalik';
 
 const RehberListItem = props => {
   const { kisi } = props;
@@ -8,7 +9,7 @@ const RehberListItem = props => {
     <div className="card">
       <div className="card-body text-center">
         <p>
-          <Resim key={kisi.KOD} kod={kisi.KOD} />
+          <Vesikalik key={kisi.KOD} kod={kisi.KOD} />
         </p>
         <h4 className="card-title">
           {kisi.PERSONEL_AD} {kisi.SOYAD}
