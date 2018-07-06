@@ -13,9 +13,7 @@ class Vesikalik extends Component {
 
   GetResim() {
     $.get(
-      'http://172.17.4.29/intapi/api/VesikalikBase64/?kod=' +
-        this.props.kod +
-        '&width=64&height=64',
+      'http://172.17.4.29/intapi/api/ResimBase64/?kod=' + this.props.kod + '&width=64&height=64',
       resim => {
         const res = resim;
         this.setState({ res });

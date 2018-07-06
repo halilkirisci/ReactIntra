@@ -12,7 +12,7 @@ class Duyuru extends Component {
   }
 
   componentDidMount = () => {
-    $.getJSON(`http://172.17.4.29/intapi/api/Duyuru?basT=01.06.2018&bitT=05.07.2018`, result => {
+    $.getJSON('http://172.17.4.29/intapi/api/Duyuru?basT=01.06.2018&bitT=06.07.2018', result => {
       const duyurular = result;
       this.setState({ duyurular });
     });

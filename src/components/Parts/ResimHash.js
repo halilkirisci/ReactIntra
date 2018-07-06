@@ -13,7 +13,9 @@ class ResimHash extends Component {
 
   GetResim() {
     $.get(
-      'http://172.17.4.29/intapi/api/ResimBase64/?hash=' + this.props.hash + '&width=64&height=64',
+      'http://172.17.4.29/intapi/api/ResimBase64Hash/?hash=' +
+        this.props.hash +
+        '&width=64&height=64',
       resim => {
         const res = resim;
         this.setState({ res });

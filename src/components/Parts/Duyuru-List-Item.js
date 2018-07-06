@@ -18,6 +18,7 @@ const DuyuruListItem = props => {
         </a>
         <Html html={duyuru.icerik.substring(0, 100)} />
       </div>
+      <DuyuruResimList resimler={duyuru.T_DUYURUFOTO} />
     </div>
   );
 };
