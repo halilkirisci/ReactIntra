@@ -14,7 +14,7 @@ const IncBody = props => {
           <i className="la la-close" />
         </button>
 
-        <LeftNav onMenuSelect={props.onMenuSelect} />
+        <LeftNav menur={yol.routes} onMenuSelect={props.onMenuSelect} />
         <div className="m-grid__item m-grid__item--fluid m-wrapper">
           <div className="m-subheader ">
             <div className="d-flex align-items-center">

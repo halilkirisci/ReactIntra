@@ -48,7 +48,7 @@ class DogumGunu extends Component {
             {this.state.doganlar.map((dogan, index) => (
               <div className="m-widget4__item">
                 <div className="m-widget4__img m-widget4__img--logo">
-                  <Vesikalik kod={dogan.KOD} />
+                  <Vesikalik key={dogan.KOD} kod={dogan.KOD} />
                 </div>
                 <div className="m-widget4__info">
                   <span className="m-widget4__title">
