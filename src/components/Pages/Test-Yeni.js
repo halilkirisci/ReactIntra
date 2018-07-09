@@ -10,7 +10,7 @@ class TestYeni extends Component {
     return (
       <div>
         <Datetime locale="tr" dateFormat="DD.MM.YYYY" timeFormat={false} />
-        <h2>Yeni Test Giriş</h2>
+        <h2>Yeni Test Girişx</h2>
         <form className="form-horizontal">
           <div className="form-group">
             <input type="text" className="form-control" />
