@@ -2,6 +2,7 @@ import React from 'react';
 import Rehber from '../Pages/Rehber';
 import Anasayfa from '../Pages/Anasayfa';
 import Test from '../Pages/Test';
+import Yemek from '../Pages/Yemek';
 
 export const routes = [
   {
@@ -25,5 +26,12 @@ export const routes = [
     component: Test,
     sidebar: () => <span>Test</span>,
     icon: 'flaticon-layers',
+  },
+  {
+    name: 'Yemek',
+    path: '/yemek',
+    component: Yemek,
+    sidebar: () => <span>Yemek</span>,
+    icon: 'flaticon-share',
   },
 ];

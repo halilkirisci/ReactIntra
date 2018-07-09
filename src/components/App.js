@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import IncHeader from './IncHeader';
 import IncBody from './IncBody';
 import IncFooter from './IncFooter';
+import * as yol from './Nav/RouteFile';
 
 class App extends Component {
   constructor(props) {
@@ -12,11 +13,22 @@ class App extends Component {
     };
   }
 
+  componentDidMount = () => {
+    if (!this.menuBilgisi) {
+      const activeBtn = document.getElementById('menuAnasayfa');
+      activeBtn.classList.add('m-menu__item--active');
+    }
+  };
+
   handleMenu = menum => {
-    console.log(menum);
+    console.log(' bilgi ' + menum);
     this.setState({ menuBilgisi: menum });
-    const activebtn = document.getElementById('menu' + menum);
-    activebtn.classList.add('m-menu__item--active');
+
+    const activeBtn = document.getElementById('menu' + menum);
+    yol.routes.map((route, i) =>
+      document.getElementById('menu' + route.name).classList.remove('m-menu__item--active'),
+    );
+    activeBtn.classList.add('m-menu__item--active');
   };
 
   render() {

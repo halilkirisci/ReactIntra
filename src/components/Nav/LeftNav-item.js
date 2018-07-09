@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const LeftNavitem = props => {
   return (
-    <li id={'menu' + props.link.name} className="m-menu__item">
+    <li id={'menu' + props.link.name} className="m-menu__item ">
       <Link
         className="m-menu__link"
         to={props.link.path}
