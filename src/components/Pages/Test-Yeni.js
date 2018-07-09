@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import Datetime from 'react-datetime';
-import { Link } from 'react-router-dom';
-import $ from 'jquery';
-import Moment from 'moment';
 
 class TestYeni extends Component {
   constructor(props) {
