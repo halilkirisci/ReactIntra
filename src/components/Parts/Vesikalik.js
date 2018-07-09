@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import loadgif from '../../style/load.gif';
+
 import $ from 'jquery';
 class Vesikalik extends Component {
   constructor(props) {
@@ -24,7 +26,7 @@ class Vesikalik extends Component {
   render() {
     //console.log('dolduuu ' + this.state.res);
     if (!this.state.res) {
-      return <span>Loading...</span>;
+      return <img width="96px" height="96px" src={loadgif} alt={''} />;
     }
     return <img className="img-fluid rounded" src={this.state.res} alt="" />;
   }

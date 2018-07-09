@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import loadgif from '../../style/load.gif';
 
 import $ from 'jquery';
 import DuyuruListItem from './Duyuru-List-Item';
@@ -19,7 +20,7 @@ class DuyuruList extends Component {
 
   render() {
     if (!this.state.duyurular) {
-      return <h2>Loading...</h2>;
+      return <img width="96px" height="96px" src={loadgif} alt={''} />;
     }
     //console.log(this.state.duyurular);
 

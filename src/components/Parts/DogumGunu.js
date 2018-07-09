@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 import Moment from 'moment';
 import Vesikalik from './Vesikalik';
+import loadgif from '../../style/load.gif';
 
 class DogumGunu extends Component {
   constructor(props) {
@@ -31,7 +32,7 @@ class DogumGunu extends Component {
 
   render() {
     if (!this.state.doganlar) {
-      return <h2>Loading...</h2>;
+      return <img width="96px" height="96px" src={loadgif} alt={''} />;
     }
     // console.log(this.state.doganlar);
     return (

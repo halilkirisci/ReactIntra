@@ -13,13 +13,6 @@ class App extends Component {
     };
   }
 
-  componentDidMount = () => {
-    if (!this.menuBilgisi) {
-      const activeBtn = document.getElementById('menuAnasayfa');
-      activeBtn.classList.add('m-menu__item--active');
-    }
-  };
-
   handleMenu = menum => {
     console.log(' bilgi ' + menum);
     this.setState({ menuBilgisi: menum });
