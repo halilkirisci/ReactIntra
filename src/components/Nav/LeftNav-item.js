@@ -10,7 +10,7 @@ const LeftNavitem = props => {
         onClick={() => props.onMenuSelect('Rehber')}
       >
         <span className="m-menu__item-here" />
-        <i className="m-menu__link-icon flaticon-line-graph" />
+        <i className={'m-menu__link-icon ' + props.link.icon} />
         <span className="m-menu__link-text">{props.link.name}</span>
       </Link>
     </li>
