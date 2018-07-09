@@ -15,7 +15,7 @@ class Vesikalik extends Component {
 
   GetResim() {
     $.get(
-      'http://172.17.4.29/intapi/api/ResimBase64/?kod=' + this.props.kod + '&width=64&height=64',
+      'http://172.17.4.29/intapi/api/ResimBase64/?kod=' + this.props.kod + '&width=80&height=80',
       resim => {
         const res = resim;
         this.setState({ res });
@@ -28,7 +28,7 @@ class Vesikalik extends Component {
     if (!this.state.res) {
       return <img width="96px" height="96px" src={loadgif} alt={''} />;
     }
-    return <img className="img-fluid rounded" src={this.state.res} alt="" />;
+    return <img width="80px" height="80px" src={this.state.res} alt="" />;
   }
 }
 export default Vesikalik;
