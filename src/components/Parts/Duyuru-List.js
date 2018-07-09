@@ -21,7 +21,7 @@ class DuyuruList extends Component {
     if (!this.state.duyurular) {
       return <h2>Loading...</h2>;
     }
-    console.log(this.state.duyurular);
+    //console.log(this.state.duyurular);
 
     return (
       <div className="m-portlet  m-portlet--full-height ">
@@ -43,7 +43,7 @@ class DuyuruList extends Component {
             <div className="m-timeline-2">
               <div className="m-timeline-2__items  m--padding-top-25 m--padding-bottom-30">
                 {this.state.duyurular.map((duyuru, index) => (
-                  <DuyuruListItem key={index} duyuru={duyuru} />
+                  <DuyuruListItem key={this.props.key + '_dli' + index} duyuru={duyuru} />
                 ))}
                 <div className="m-timeline-2__item m--margin-top-30">
                   <span className="m-timeline-2__item-time">12:45</span>

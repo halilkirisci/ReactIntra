@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
+import TestList from '../Parts/Test-List';
 
 class Test extends Component {
   constructor(props) {
@@ -7,7 +7,11 @@ class Test extends Component {
   }
 
   render() {
-    return <div>Test Sayfası</div>;
+    return (
+      <div>
+        <TestList />
+      </div>
+    );
   }
 }
 

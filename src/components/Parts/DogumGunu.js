@@ -11,12 +11,12 @@ class DogumGunu extends Component {
   }
 
   componentDidMount = () => {
-    console.log(
+    /*console.log(
       'http://172.17.4.29/intapi/api/Kisi?gun=' +
         Moment().format('DD') +
         '&ay=' +
         +Moment().format('MM'),
-    );
+    );*/
     $.getJSON(
       'http://172.17.4.29/intapi/api/Kisi?gun=' +
         Moment().format('DD') +
@@ -33,7 +33,7 @@ class DogumGunu extends Component {
     if (!this.state.doganlar) {
       return <h2>Loading...</h2>;
     }
-    console.log(this.state.doganlar);
+    // console.log(this.state.doganlar);
     return (
       <div className="m-portlet m-portlet--full-height m-portlet--fit ">
         <div className="m-portlet__head">
@@ -46,9 +46,9 @@ class DogumGunu extends Component {
         <div className="m-portlet__body">
           <div className="m-widget4 m-widget4--chart-bottom">
             {this.state.doganlar.map((dogan, index) => (
-              <div className="m-widget4__item">
+              <div key={'__dogan' + dogan.KOD} className="m-widget4__item">
                 <div className="m-widget4__img m-widget4__img--logo">
-                  <Vesikalik key={dogan.KOD} kod={dogan.KOD} />
+                  <Vesikalik key={'dogan' + dogan.KOD} kod={dogan.KOD} />
                 </div>
                 <div className="m-widget4__info">
                   <span className="m-widget4__title">

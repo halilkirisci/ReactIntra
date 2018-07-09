@@ -5,19 +5,19 @@ import Test from '../Pages/Test';
 
 export const routes = [
   {
-    name: 'Rehber',
-    path: '/Rehber',
-    exact: true,
-    component: Rehber,
-    sidebar: () => <span>Rehber</span>,
-    icon: 'flaticon-network',
-  },
-  {
     name: 'Anasayfa',
     path: '/',
+    exact: true,
     component: Anasayfa,
     sidebar: () => <span>Anasayfa</span>,
     icon: 'flaticon-open-box',
+  },
+  {
+    name: 'Rehber',
+    path: '/Rehber',
+    component: Rehber,
+    sidebar: () => <span>Rehber</span>,
+    icon: 'flaticon-network',
   },
   {
     name: 'Test',

@@ -11,10 +11,10 @@ class Anasayfa extends Component {
     return (
       <div className="row">
         <div className="col-xl-9">
-          <DuyuruList />
+          <DuyuruList key="duyuruLst" />
         </div>
         <div className="col-xl-3">
-          <DogumGunu />
+          <DogumGunu key="dogumGunu" />
         </div>
       </div>
     );

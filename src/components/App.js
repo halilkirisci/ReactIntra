@@ -15,6 +15,8 @@ class App extends Component {
   handleMenu = menum => {
     console.log(menum);
     this.setState({ menuBilgisi: menum });
+    const activebtn = document.getElementById('menu' + menum);
+    activebtn.classList.add('m-menu__item--active');
   };
 
   render() {
