@@ -4,6 +4,7 @@ import Datetime from 'react-datetime';
 class TestYeni extends Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   render() {

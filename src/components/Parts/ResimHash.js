@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
 class ResimHash extends Component {
   constructor(props) {
     super(props);
@@ -8,20 +7,15 @@ class ResimHash extends Component {
   }
 
   componentDidMount = () => {
-    this.GetResim();
-  };
-
-  GetResim() {
-    $.get(
+    fetch(
       'http://172.17.4.29/intapi/api/ResimBase64Hash/?hash=' +
         this.props.hash +
         '&width=64&height=64&max=1',
-      resim => {
-        const res = resim;
-        this.setState({ res });
-      },
-    );
-  }
+    )
+      .then(response => response.json())
+      .then(res => this.setState({ res }))
+      .catch(error => console.log('hata', error));
+  };
 
   render() {
     //console.log('dolduuu ' + this.state.res);

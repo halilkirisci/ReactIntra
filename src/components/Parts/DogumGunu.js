@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
 import Moment from 'moment';
 import Vesikalik from './Vesikalik';
 import loadgif from '../../style/load.gif';
@@ -18,16 +17,16 @@ class DogumGunu extends Component {
         '&ay=' +
         +Moment().format('MM'),
     );*/
-    $.getJSON(
+
+    fetch(
       'http://172.17.4.29/intapi/api/Kisi?gun=' +
         Moment().format('DD') +
         '&ay=' +
         +Moment().format('MM'),
-      result => {
-        const doganlar = result;
-        this.setState({ doganlar });
-      },
-    );
+    )
+      .then(response => response.json())
+      .then(doganlar => this.setState({ doganlar }))
+      .catch(error => console.log('hata', error));
   };
 
   render() {

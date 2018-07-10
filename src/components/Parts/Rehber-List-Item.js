@@ -1,5 +1,4 @@
 import React from 'react';
-import Resim from './Vesikalik';
 import Vesikalik from './Vesikalik';
 
 const RehberListItem = props => {

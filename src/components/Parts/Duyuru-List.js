@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import loadgif from '../../style/load.gif';
-
-import $ from 'jquery';
 import DuyuruListItem from './Duyuru-List-Item';
 
 class DuyuruList extends Component {
@@ -12,10 +10,10 @@ class DuyuruList extends Component {
   }
 
   componentDidMount = () => {
-    $.getJSON('http://172.17.4.29/intapi/api/Duyuru?basT=01.06.2018&bitT=06.07.2018', result => {
-      const duyurular = result;
-      this.setState({ duyurular });
-    });
+    fetch('http://172.17.4.29/intapi/api/Duyuru?basT=01.06.2018&bitT=06.07.2018')
+      .then(response => response.json())
+      .then(duyurular => this.setState({ duyurular }))
+      .catch(error => console.log('hata', error));
   };
 
   render() {
@@ -55,16 +53,16 @@ class DuyuruList extends Component {
                     AEOL Meeting With
                   </div>
                   <div className="m-list-pics m-list-pics--sm m--padding-left-20">
-                    <a href="#">
+                    <a href="">
                       <img src="assets/app/media/img/users/100_4.jpg" title="" alt="" />
                     </a>
-                    <a href="#">
+                    <a href="">
                       <img src="assets/app/media/img/users/100_13.jpg" title="" alt="" />
                     </a>
-                    <a href="#">
+                    <a href="">
                       <img src="assets/app/media/img/users/100_11.jpg" title="" alt="" />
                     </a>
-                    <a href="#">
+                    <a href="">
                       <img src="assets/app/media/img/users/100_14.jpg" title="" alt="" />
                     </a>
                   </div>

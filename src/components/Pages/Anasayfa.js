@@ -5,6 +5,7 @@ import DogumGunu from '../Parts/DogumGunu';
 class Anasayfa extends Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   render() {

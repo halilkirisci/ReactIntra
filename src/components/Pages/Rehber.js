@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import SearchBar from '../Parts/SearchBar';
-import $ from 'jquery';
 import RehberList from '../Parts/Rehber-List';
 
 class Rehber extends Component {

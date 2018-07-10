@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import loadgif from '../../style/load.gif';
-
-import $ from 'jquery';
 class Vesikalik extends Component {
   constructor(props) {
     super(props);
@@ -10,18 +8,13 @@ class Vesikalik extends Component {
   }
 
   componentDidMount = () => {
-    this.GetResim();
-  };
-
-  GetResim() {
-    $.get(
+    fetch(
       'http://172.17.4.29/intapi/api/ResimBase64/?kod=' + this.props.kod + '&width=80&height=80',
-      resim => {
-        const res = resim;
-        this.setState({ res });
-      },
-    );
-  }
+    )
+      .then(response => response.json())
+      .then(res => this.setState({ res }))
+      .catch(error => console.log('hata', error));
+  };
 
   render() {
     //console.log('dolduuu ' + this.state.res);

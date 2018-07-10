@@ -17,7 +17,7 @@ const DuyuruListItem = props => {
         <i className="fa fa-genderless m--font-danger" />
       </div>
       <div className="m-timeline-2__item-text  m--padding-top-5">
-        <a href="#">
+        <a href="">
           <h5>{duyuru.baslik}</h5>
         </a>
         <Html html={duyuru.icerik.substring(0, 100)} />

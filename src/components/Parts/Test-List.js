@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import $ from 'jquery';
 import Moment from 'moment';
 class TestList extends Component {
   constructor(props) {
@@ -10,10 +9,10 @@ class TestList extends Component {
   }
 
   componentDidMount = () => {
-    $.getJSON('http://172.17.4.29/intapi/api/W_YEMEK', result => {
-      const testliste = result;
-      this.setState({ testliste });
-    });
+    fetch('http://172.17.4.29/intapi/api/W_YEMEK')
+      .then(response => response.json())
+      .then(testliste => this.setState({ testliste }))
+      .catch(error => console.log('hata', error));
   };
 
   render() {
