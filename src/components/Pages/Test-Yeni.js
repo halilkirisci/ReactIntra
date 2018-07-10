@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
-import Datetime from 'react-datetime';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+
+import 'react-datepicker/dist/react-datepicker.css';
 
 class TestYeni extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { date: new Date() };
+    this.handleChange = this.handleChange.bind(this);
   }
 
+  handleChange(date) {
+    this.setState({
+      startDate: date,
+    });
+  }
   render() {
     return (
       <div>
-        <Datetime locale="tr" dateFormat="DD.MM.YYYY" timeFormat={false} />
-        <h2>Yeni Test Girişx</h2>
+        <DatePicker
+          className="form-control"
+          selected={this.state.startDate}
+          onChange={this.handleChange}
+        />
         <form className="form-horizontal">
           <div className="form-group">
             <input type="text" className="form-control" />
