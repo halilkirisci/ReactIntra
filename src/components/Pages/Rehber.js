@@ -15,10 +15,10 @@ class Rehber extends Component {
   }
 
   GetKisi(anahtar) {
-    $.getJSON(`http://172.17.4.29/intapi/api/Kisi/${anahtar}`, result => {
-      const kisiler = result;
-      this.setState({ kisiler });
-    });
+    fetch(`http://172.17.4.29/intapi/api/Kisi/${anahtar}`)
+      .then(response => response.json())
+      .then(kisiler => this.setState({ kisiler }))
+      .catch(error => console.log('hata', error));
   }
 
   render() {
