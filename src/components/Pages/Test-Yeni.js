@@ -27,15 +27,17 @@ class TestYeni extends Component {
       console.log(name + ':' + data.get(name));
     }*/
 
+    const dt = {
+      ID: 99,
+      YEMEK_ADI: data.get('adi'),
+      KALORI: 99,
+      TARIH: moment(data.get('tarih'), 'DD.MM.YYYY', true).format(),
+    };
+    console.log(dt);
     fetch('http://172.17.4.29/intapi/api/W_YEMEK', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        ID: 99,
-        YEMEK_ADI: data.get('adi'),
-        KALORI: data.get('kalori'),
-        TARIH: data.get('tarih'),
-      }),
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      body: JSON.stringify(dt),
     }).catch(error => console.log('hata', error));
     // console.log(data);
   }
