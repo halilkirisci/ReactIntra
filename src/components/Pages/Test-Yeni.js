@@ -28,9 +28,8 @@ class TestYeni extends Component {
     }*/
 
     const dt = {
-      ID: 99,
       YEMEK_ADI: data.get('adi'),
-      KALORI: 99,
+      KALORI: data.get('kalori'),
       TARIH: moment(data.get('tarih'), 'DD.MM.YYYY', true).format(),
     };
     console.log(dt);
@@ -38,7 +37,15 @@ class TestYeni extends Component {
       method: 'POST',
       headers: { 'Content-Type': 'application/json; charset=utf-8' },
       body: JSON.stringify(dt),
-    }).catch(error => console.log('hata', error));
+    })
+      .then(function(response) {
+        console.log('ResponseText:' + response.text);
+        return response.text;
+      })
+      .then(function(data) {
+        console.log('data:' + JSON.stringify(data));
+      })
+      .catch(error => console.log('hata', error));
     // console.log(data);
   }
   render() {
