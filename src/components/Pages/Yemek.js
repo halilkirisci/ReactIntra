@@ -14,31 +14,30 @@ class Yemek extends Component {
     };
   }
 
-  _handleSearch = query => {
-    //debugger;
-    this.setState({ isLoading: true });
-    fetch(`http://172.17.4.29/intapi/api/Kisi/${query}`)
-      .then(resp => resp.json())
-      .then(options => {
-        this.setState({
-          isLoading: false,
-          options,
-        });
-      })
-      .catch(error => console.log('hata', error));
-  };
-
   render() {
     return (
       <div>
         <div>Yemek Sayfası</div>
 
         <AsyncTypeahead
-          {...this.state}
-          delay={400}
-          onSearch={this._handleSearch}
+          isLoading={this.state.isLoading}
+          caseSensitive
+          ignoreDiacritics={false}
           searchText="Araniyeee"
           placeholder="Rehber Ara..."
+          labelKey={option => `${option.KOD}`}
+          onSearch={query => {
+            this.setState({ isLoading: true });
+            fetch(`http://172.17.4.29/intapi/api/Kisi/${query}`)
+              .then(resp => resp.json())
+              .then(json =>
+                this.setState({
+                  isLoading: false,
+                  options: json,
+                }),
+              );
+          }}
+          options={this.state.options}
           renderMenuItemChildren={(option, props) => (
             <div>
               {option.PERSONEL_AD} {option.SOYAD}
